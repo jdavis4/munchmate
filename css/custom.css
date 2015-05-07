@@ -1,3 +1,32 @@
+
+.modal {
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  opacity: 0;
+  -webkit-transition: -webkit-transform .25s, opacity 1ms .25s;
+     -moz-transition:    -moz-transform .25s, opacity 1ms .25s;
+          transition:         transform .25s, opacity 1ms .25s;
+  -webkit-transform: translate3d(0, 100%, 0);
+      -ms-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+}
+.modal.active {
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: -webkit-transform .25s; 
+     -moz-transition:    -moz-transform .25s;
+          transition:         transform .25s;
+  -webkit-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+
 #text {
   font-size: 14px;
   word-break: normal;
@@ -7,4 +36,102 @@
 
 #name {
 	text-align: center;
+}
+
+.slider {
+	/*background-color: #ECF0F1;*/
+	background-color: white;
+  	margin-top: 11px;
+  	margin-bottom: 11px;
+  	border: 1px solid #BDC3C7;
+  	border-radius: 25px;
+  }
+
+.profile {
+	padding: 8px;
+}
+
+.convoGrey {
+	position: relative;
+}
+.response {
+	position: absolute;
+	top: 45px;
+	left: 50px;
+	z-index: 11;
+}
+
+.content {
+	background-color: #ECF0F1;*/ /*light grey*/
+}
+
+.sendMIcon {
+	height: 30px;
+  	width: 30px;
+  	margin-top: -10px;
+  	padding-left: 5px;
+ 	padding-bottom: 5px;
+}
+
+.bar, .bar-nav {
+	background-color: #9B59B6; /*light purple*/
+	border-bottom: 1px solid #2C3E50;
+	margin-left: -7px;
+}
+
+.bar-footer {
+	border-top: 1px solid #2C3E50;
+}
+
+.input-row {
+	border-bottom: 1px solid #9B59B6 ;
+}
+
+a:hover, a:focus, .btn-link:hover, .btn-link:focus, .btn-link, a, .icon:hover, .icon:focus {
+	color: #8E44AD;
+}
+
+.input-row input.sendingMessage {
+	float: left;
+	width: 90%;
+}
+
+.title {
+	color: #ECF0F1;
+}
+
+.fui-user {
+	font-size: 60px;
+	color: ;
+}
+
+.icon-home, .icon-gear, .icon-left-nav, .icon-compose, .fui-mail, .icon-right-nav, .icon-left {
+	color: #F1C40F;
+}
+
+.send {
+	color: #F1C40F;
+	padding: 2px;
+}
+
+.message-icon {
+	border: 1px solid #BDC3C7;
+	color: #95A5A6;
+}
+
+.message-icon {
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	font-size: x-small;
+	display: inline-block;
+	/*padding: 4px; */
+	overflow-x: auto;
+	margin: 2px;
+}
+
+.profile-image {
+	width:99px;
+	height: 99px;
+
 }

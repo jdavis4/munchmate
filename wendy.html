@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
@@ -9,37 +9,70 @@
     
     <!--CSS-->
       <link href="css/ratchet.css" rel="stylesheet">
-      <link href="css/messaging.css" rel="stylesheet">
+      <link href="css/custom.css" rel="stylesheet">
       <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
       <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'> 
     
     <!--Scripts-->
       <script src="js/ratchet.js"></script>
-    
+
+
+    <!-- Loading Bootstrap -->
+    <link href="dist/css/vendor/bootstrap.min.css" rel="stylesheet">
+    <!-- Loading Flat UI -->
+    <link href="dist/css/flat-ui.min.css" rel="stylesheet">
+
+
+    <script>
+      var chatMessages=new Array();
+      var autoResponse=new Array("convo3.png","convo3.png","convo2.png","convo1.png","convo4.png");
+    </script>
 </head>
 
 <body>
   <header class="bar bar-nav">
       <button class="btn btn-link btn-nav pull-left"><a class="icon icon-left-nav" href="messages.html" data-transition="slide-in"></a></button>
       <button class="btn btn-link btn-nav pull-right"><a class="icon icon-home" href="swipe.html" data-transition="slide-in"></a></button>
-      <h1 class="title">Wendy, 19</h1>
+      <h1 class="title"><img src="wendyheader.png" width="auto" height="auto"></img></h1>
   </header> 
 
       <div class="content" align="center">
-        <div class="content-padded">
-          
-
-        <div class="bar bar-standard bar-footer">
-          <form>
-            <div class="input-row">
-              <span class="icon"><img src="messages-icon.png" width="auto" height="15px" /></span>
-              <input type="text" placeholder="Send a message!" />
-            </div> 
-          </form>
-        </div> <!-- //end messaging bar -->
+        <div class="content-padded" id="chat">
+          <img src="" id="convoGrey" width=""/>
+          <span id="responseOne" class="response"></span>
+          <span id="automatedResponse">
+            <!-- automated response generated here-->
+          </span>
+          </div>
 
       </div>
     </div>
 
+  <div class="bar bar-standard bar-footer">
+            <form>
+              <div class="input-row">
+                <button class="btn btn-link btn-nav icon" type="button" onClick="getMessage()"><img class="sendMIcon" src="messagearrow.png"/></button>
+                <input type="text" id="sendMessage" class="sendingMessage" placeholder="Send a message!" />
+              </div> 
+            </form>
+  </div> <!-- //end messaging bar --> 
+
+    <script language="javascript" type="text/javascript">
+      var message, autoNum;
+
+        function getMessage(){
+          message = document.getElementById('sendMessage').value;
+            //console.log(message);
+          autoNum = Math.floor((Math.random() * 4) + 1); //change 4 to whatever amount is in array
+            //console.log(autoResponse[autoNum]);
+          document.getElementById('convoGrey').src = "convo-greybox.png";
+          document.getElementById('convoGrey').style.width = "100%";
+          document.getElementById('responseOne').innerHTML = message;
+
+          var aiResponse = "<img src='"+ autoResponse[autoNum] +"' id='autoImage' width='100%' height='auto'>"
+          document.getElementById('automatedResponse').innerHTML = aiResponse;
+        }
+    </script>
 </body>
+
 </html>

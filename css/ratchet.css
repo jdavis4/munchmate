@@ -17,6 +17,7 @@ html {
 
 body {
   margin: 0;
+  color: #777;
 }
 
 article,
@@ -32,6 +33,13 @@ nav,
 section,
 summary {
   display: block;
+}
+
+
+ .slideme{
+  font-size: 18px;
+  text-align: center;
+  color:#F1C40F;
 }
 
 audio,
@@ -612,7 +620,7 @@ input[type="button"] {
 }
 
 .bar .btn-nav.pull-left {
-  margin-left: -5px;
+  margin-left: 0px;
 }
 .bar .btn-nav.pull-left .icon-left-nav {
   margin-right: -3px;
@@ -692,10 +700,11 @@ input[type="button"] {
 }
 
 .card {
-  margin: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
   overflow: hidden;
   background-color: white;
-  border: 1px solid #ddd;
+  border: 1px solid #9B59B6;
   border-radius: 6px;
 }
 
@@ -905,6 +914,7 @@ select {
 }
 
 .input-row label {
+  white-space: nowrap;
   float: left;
   width: 35%;
   padding: 8px 15px;
@@ -1102,7 +1112,7 @@ select {
 .modal.active {
   height: 100%;
   opacity: 1;
-  -webkit-transition: -webkit-transform .25s;
+  -webkit-transition: -webkit-transform .25s; 
      -moz-transition:    -moz-transform .25s;
           transition:         transform .25s;
   -webkit-transform: translate3d(0, 0, 0);
@@ -1234,7 +1244,7 @@ select {
   font-family: Ratchicons;
   font-size: inherit;
   line-height: 1;
-  color: #bbb;
+  color: #9B59B6;
   text-decoration: none;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
